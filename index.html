@@ -1051,5 +1051,10 @@ applyTheme(); buildAccentRow(); renderAll();
 initSupabase();
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
 </script>
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+}
+</script>
 </body>
 </html>
